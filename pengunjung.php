@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contoh menambah data ke database</title>
+    <title>Data Pasien</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,16 +56,18 @@ $rows = $query->get_result();
         </tr>
         <?php 
         while ($row = $rows->fetch_array()) {
-            //$url_edit = "edit.php?id=" . $row['id'];
-            //$url_delete = "delete.php?id=" . $row['id'];
+            $url_edit = "editdata.php?id=" . $row['id'];
+            $url_delete = "deletedata.php?id=" . $row['id'];
+
+            
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['Nama'] . "</td>";
             echo "<td>" . $row['Kelamin'] . "</td>";
             echo "<td>" . $row['Masuk'] . "</td>";
             echo "<td>" . $row['Keluar'] . "</td>";
-            //echo "<td><a href ='" . $url_edit . "'><button>Edit</button></a>";
-            //echo "<a href='" . $url_delete . "'><button>Delete</button></a></td>";
+            echo "<td><a href ='" . $url_edit . "'><button>Edit</button></a>";
+            echo "<a href='" . $url_delete . "'><button>Delete</button></a></td>";
             echo "</tr>";
         }
          ?>
