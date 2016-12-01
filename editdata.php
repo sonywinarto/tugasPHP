@@ -31,7 +31,7 @@ $data = $rows->fetch_object();
         </div>
         <div>
             <label>Nama</label>
-            <input type="text" name="nama">
+            <input type="text" name="nama" value="<?php echo "string"; ?>">
         </div>
         <div>
             <label>Jenis Kelamin</label>

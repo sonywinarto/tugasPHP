@@ -71,5 +71,6 @@ $rows = $query->get_result();
             echo "</tr>";
         }
          ?>
+         <p><a href="index.html">Kembali</a> Ke Halaman Login</p>
 </body>
 </html>
