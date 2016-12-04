@@ -7,7 +7,7 @@ if(isset($_POST["username"]) &&($_POST["password"])) {
 	$conn = konek_db();
 
 	$query = $conn->prepare("UPDATE login set password=? where username=?");
-	$query->bind_param("ss",$username,$password);
+	$query->bind_param("ss",$password,$username);
 
 	$hasil = $query->execute();
 
